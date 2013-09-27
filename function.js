@@ -3,6 +3,7 @@ document.write('   ');
 document.write('<b>loud</b>');
 
 document.write('<br/> <h4>Word Count example</h4>');
+
 var wordCount = function(text) {
  
 	// \W matches non-word characters, match one or more
@@ -17,3 +18,6 @@ var wordCount = function(text) {
 }
 
 document.write('test 1: ' + wordCount('one two , nine and a half three'));
+
+
+

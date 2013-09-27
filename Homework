@@ -1,0 +1,69 @@
+1 Write a function that reverses the order of a string (for instance passing 'hello' returns 'olleh')
+
+2 Write a function that takes an array of text fragments and a length, and returns a list of all fragments that are longer than the length.
+
+3 Write a function that returns 'Good morning' if it is the morning, 'Good afternoon' if it is the afternoon, and 'Good evening' if it is the evening.
+
+4 Write a function that given a dollar amount returns a object of the number of bills and coins needed to return change.
+
+For instance, given 7.23, it should return:
+{
+  fives: 1,
+  ones: 2,
+  dimes: 2,
+  pennies: 3
+}
+
+5 Given the following comma separated data from the IMDb top rated movies:
+
+var items = [
+    'The Shawshank Redemption,1994,1043071',
+    'The Godfather,1972,732416',
+    'The Godfather: Part II,1974,474640',
+    'Pulp Fiction,1994,806431',
+    'The Dark Knight,2008,1017508',
+    '12 Angry Men,1957,255846',
+    'Schindler's List,1993,528900',
+    'The Lord of the Rings: The Return of the King,2003,738931',
+    'Fight Club,1999,791186',
+    'Star Wars: Episode V - The Empire Strikes Back,1980,503348'
+];
+
+Create a function that splits the values into the title, year, and number of votes and returns a list of movie objects sorted by year.
+
+6-? Also come up with a couple interesting problems you might like to solve, and define a function and solution for them
+
+
+Here's the basic HTML file we wrote:
+
+<html>
+  <head>
+    <title>WebLab Playground</title>
+  </head>
+  <body>
+    <h1>Messing around with Functions!</h1>
+    
+    <script src="./functions.js"></script>
+    
+  </body>
+</html>
+
+And the initial JS file:
+
+document.write('<h4>Word Count Example</h4>');
+
+var wordCount = function(text) {
+  // \W matches non-word characters, match one or more
+  var tokens = text.split(/\W+/);
+  // account for empty elements at the start or end of the list
+  var count = tokens.length;
+  if(tokens[0] === '') {
+    count--;
+  }
+  if(tokens[tokens.length - 1] === '') {
+    count--;
+  }
+  return count;
+}
+
+document.write('test 1: ' + wordCount(' one  two three'));
