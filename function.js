@@ -1,24 +1,12 @@
 
 
+document.write('<h4>Reverse string </h4>')
 
-/* ***** 4 Write a function that given a dollar amount returns a object of the number of bills and coins needed to return change.
-*/
-
-/*var cashChange = function (bills, coins) {
-	var Bills = [];
-	var Coins = [];
-	 for(var bills >= 1; 
-	
-
-}*/
-
-/*document.write('<h4>Reverse string </h4>')
-
- Reverses the characters of the input 
+// Reverses the characters of the input 
 
 
 var reverseString = function(text) {
-	/*var result ='';
+	var result ='';
 	for(var index = text.length - 1; index >=0; index --) {
 		result += text[index];
 	}
@@ -28,12 +16,12 @@ var reverseString = function(text) {
 	
 	// most concise way, but could lead to issues as 
 	//functions become more complex.
-return text.split('').reverse().join('');
-}
+//return text.split('').reverse().join('');
+//}
 document.write('<p> hello -> ' + reverseString('hello') + '</p>');
 document.write('<p>a longer example -> ' + reverseString('a longer example') + '</p>');
 
-*/
+
 
 document.write('<h4>Word Length </h4>');
 /* takes an input from an array items and returns members with a certain length or longer.*/
@@ -101,7 +89,7 @@ For instance, given 7.23, it should return:
 
 */
 document.write('<h4>Showing how to make change for a given amount </h4>');
-
+/*
 var makingChange = function(amount) {
 	var change = {};
 	amount *= 100; //convert to pennies t omake the math easier
@@ -150,4 +138,32 @@ var makingChange = function(amount) {
 	}
 		
 	return change;	
+}*/
+var makingChange = function(amount) {
+	var change = {};
+var denominations = [
+	['hundreds', 10000 ],
+	{name: 'hundreds', value: 10000 },
+	{name: 'fifties', value: 5000 },
+	{name: 'twenties', value: 2000 },
+	{name: 'tens', value: 1000 },
+	{name: 'fives', value: 5000 },
+	{name: 'ones', value: 100 },
+	{name: 'quarters', value: 25 },
+	{name: 'dimes', value: 10 },
+	{name: 'nickles', value: 5 },
+	{name: 'pennies', value: 1 }
+];
+//onvert pennies to make the math easier
+amount *= 100
+for(var index = 0; index < denominations.length; index++){
+	var current = denominations[index];
+	if(amount >= current.value) {
+		var number = parseInt(amount / current.value);
+		amount -= number * current.value;
+		change[current.name] = number;
+	}
+
+return change;
 }
+document.write(amount(23,345.56));
