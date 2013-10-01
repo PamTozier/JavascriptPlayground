@@ -207,6 +207,10 @@ var sortMovies = function(lhs, rhs)		{
 	else if (lhs.year > rhs.year){
 		return 1;
 	}
+	else if (lhs.votes > rhs.votes){
+		return -1}
+	else if (lhs.votes < rhs.votes) {
+		return 1;}
 	else {
 		return 0;
 	}
