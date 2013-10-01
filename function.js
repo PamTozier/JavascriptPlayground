@@ -34,3 +34,12 @@ document.write('<p> hello -> ' + reverseString('hello') + '</p>');
 document.write('<p>a longer example -> ' + reverseString('a longer example') + '</p>');
 
 
+
+document.write ('<h4>Word Length </h4>');
+/* takes an input from an array items and returns members with a certain length or longer.*/
+var filterWordLength = function(list, length) {
+	var result [];
+	
+	
+	return result;
+	
