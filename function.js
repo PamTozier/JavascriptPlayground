@@ -198,11 +198,19 @@ var result = [];
 			year: parseInt(tokens[1]),
 			votes: parseInt(tokens[2])
 		};
-		results.push(movie);
-			
-		
-		
+		result.push(movie);
+	}	
+var sortMovies = function(lhs, rhs)		{
+	if(lhs.year < rhs.year) {
+		return -1;
+	}
+	else if (lhs.year > rhs.year){
+		return 1;
+	}
+	else {
+		return 0;
+	}
 }
-return result;
+return result.sort(sortMovies);
 }
 document.write('<pre>' + JSON.stringify(movieSort(movies), null, ' ') + '</pre>');
