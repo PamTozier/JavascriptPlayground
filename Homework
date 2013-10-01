@@ -1,4 +1,4 @@
-1 Write a function that reverses the order of a string (for instance passing 'hello' returns 'olleh')
+b1 Write a function that reverses the order of a string (for instance passing 'hello' returns 'olleh')
 
 2 Write a function that takes an array of text fragments and a length, and returns a list of all fragments that are longer than the length.
 
