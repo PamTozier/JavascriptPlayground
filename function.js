@@ -163,7 +163,9 @@ for(var index = 0; index < denominations.length; index++){
 		amount -= number * current.value;
 		change[current.name] = number;
 	}
-
+}
 return change;
 }
-document.write(amount(23,345.56));
+document.write('value: ' + makingChange(345.56));
+
+	
