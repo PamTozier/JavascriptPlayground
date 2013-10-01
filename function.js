@@ -166,6 +166,6 @@ for(var index = 0; index < denominations.length; index++){
 }
 return change;
 }
-document.write('value: ' + makingChange(345.56));
+document.write('<p> value: ' + JSON.stringify(makingChange(345.56)) + '</p>');
 
 	
