@@ -64,6 +64,7 @@ document.write('<p>7 -> ' + filterWordLength(testWords, 7) + '</p>');
 
 Morning is midnight to noon, afternoon is noon to five, evening is five to midnight.
 */
+document.write('<h4> Greetings </h4>');
 
 var dateGreeting = function(date){
 	var result = '';
@@ -98,19 +99,55 @@ For instance, given 7.23, it should return:
   pennies: 3
 }
 
-
+*/
 document.write('<h4>Showing how to make change for a given amount </h4>');
 
-var makingChange = function(bills, coins, count) {
-	var result = [];
-	var count = '';
-	
-	for(index = 0; index >= 1.0; index++){
-		if(typeof element === 'string') {
-			return 'ERROR';
-		}
-		else if(typeof element === 'number') {
-			index[count] >= 1; 
+var makingChange = function(amount) {
+	var change = {};
+	amount *= 100; //convert to pennies t omake the math easier
+	while(amount > 0) {
+		// calculate hundreds
+		if(amount >= 10000) {
+			change.hundreds = parseInt(amount / 10000); }
+			amount -= change.hundreds * 10000
+		// calculate fifties
+		else if(amount >= 5000) {
+			change.fifties = parseInt(amount / 5000); 
+			amount -= change.fifties * 5000 }
+		//calculate twenties
+		else if(amount >= 2000) {
+			change.twenties = parseInt(amount / 2000); 
+			amount -= change.twenties * 2000 }
+		//calculate tens
+		else if(amount >= 1000) {
+			change.tens = parseInt(amount / 1000); 
+			amount -= change.tens * 1000 }
+		//calculate fives
+		else if(amount >= 500) {
+			change.fives = parseInt(amount / 500); 
+			amount -= change.fives * 500}
+		//calculate ones
+		else if(amount >= 100) {
+			change.ones = parseInt(amount / 100); 
+			amount -= change.ones * 100}
+		//calculate quarters
+		else if(amount >= 25) {
+			change.quarters = parseInt(amount / 25); 
+			amount -= change.quarters * 25}
+		//calculate dimes
+		else if(amount >= 10) {
+			change.dimes = parseInt(amount / 10); 
+			amount -= change.dimes * 10}
+		//calculate nickles
+		else if(amount >= 5) {
+			change.nickles = parseInt(amount / 5); 
+			amount -= change.nickles * 5}
+		//calculate pennies
+		else if(amount >= 1) {
+			change.pennies = parseInt(amount / 1); 
+			amount -= change.pennies * 1}
 		
+	}
+		
+	return change;	
 }
-	*/
