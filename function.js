@@ -169,3 +169,40 @@ return change;
 document.write('<p> value: ' + JSON.stringify(makingChange(345.56)) + '</p>');
 
 	
+document.write('<h4>Movie Sort </h4>');
+/*5 Given the following comma separated data from the IMDb top rated movies:
+Create a function that splits the values into the title, year, and number of votes and returns a list of movie objects sorted by year.
+*/
+var movies = [
+    'The Shawshank Redemption,1994,1043071',
+    'The Godfather,1972,732416',
+    'The Godfather: Part II,1974,474640',
+    'Pulp Fiction,1994,806431',
+    'The Dark Knight,2008,1017508',
+    '12 Angry Men,1957,255846',
+    'Schindler\'s List,1993,528900',
+    'The Lord of the Rings: The Return of the King,2003,738931',
+    'Fight Club,1999,791186',
+    'Star Wars: Episode V - The Empire Strikes Back,1980,503348'
+];
+/* takes a formatted list of movies and parses the data and returns the movies sorted by date released 
+*/
+
+var movieSort = function(movies) {
+var result = [];
+	for(var index = 0; index < movies.length; index++) {
+		var tokens = movies[index].split(',');
+				
+		var movie = {
+			title: tokens[0],
+			year: parseInt(tokens[1]),
+			votes: parseInt(tokens[2])
+		};
+		results.push(movie);
+			
+		
+		
+}
+return result;
+}
+document.write('<pre>' + JSON.stringify(movieSort(movies), null, ' ') + '</pre>');
