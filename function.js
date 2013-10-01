@@ -39,7 +39,13 @@ document.write ('<h4>Word Length </h4>');
 /* takes an input from an array items and returns members with a certain length or longer.*/
 var filterWordLength = function(list, length) {
 	var result [];
-	
-	
+	for(var index = 0; index < list.length; index==) {
+		var element = list[index];
+		if((typeof element === 'string') && (element.length > length)) {	
+	result.push(element);
+	}
+  }
 	return result;
+} 
+
 	
