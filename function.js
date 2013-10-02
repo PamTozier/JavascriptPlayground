@@ -6,7 +6,7 @@ document.write('<h4>Reverse string </h4>')
 
 
 var reverseString = function(text) {
-	var result ='';
+	var result = '';
 	for(var index = text.length - 1; index >=0; index --) {
 		result += text[index];
 	}
@@ -47,7 +47,21 @@ var testWords = [
 
 document.write('<p>7 -> ' + filterWordLength(testWords, 7) + '</p>');
 
+// in underscorejs
+return _.filter(list, function(element){
+  return element.length > length;
+  
+})
+}
+var testWords = [
+	'short',
+	'long',
+	'longer',
+	'really long',
+	'ridiculously long sentence compared to everything else'
+];
 
+console.log(filterWordLength(testWords, 7));
 /*3 Write a function that returns 'Good morning' if it is the morning, 'Good afternoon' if it is the afternoon, and 'Good evening' if it is the evening.
 
 Morning is midnight to noon, afternoon is noon to five, evening is five to midnight.
@@ -218,3 +232,38 @@ var sortMovies = function(lhs, rhs)		{
 return result.sort(sortMovies);
 }
 document.write('<pre>' + JSON.stringify(movieSort(movies), null, ' ') + '</pre>');
+
+
+navigator.geolocation.getCurrentPosition(function(details) {
+  console.log(JSON.stringify(details));
+});
+
+var success = function(details){
+console.log(JSON.stringify(details));
+};
+var error = function(message) {
+  console.error("denied! " + message);
+};
+  console.log('before call');
+navigator.geolocation.getCurrentPosition(success, error);
+  console.log('after call');
+
+//well written code for the fibonacci sequence
+function fibonacci(size) {
+  var first = 0, second = 1, next, count = 2, result = [first, second];
+
+  if(size === 0)
+    return [];
+  else if(size === 1)
+    return [0];
+  // collect results up to the requested size
+  while(count++ < size) {
+    next = first + second;
+    first = second;
+    second = next;
+    result.push(next);
+  }
+  return result;
+}
+return fibonacci(15);
+
